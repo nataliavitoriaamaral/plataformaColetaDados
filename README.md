@@ -20,8 +20,8 @@ Diversas **Universidades** (São José dos Campos, Porto Alegre, São Paulo, Rio
 
 O projeto foi construído utilizando os conceitos de Orientação a Objetos (Herança, Polimorfismo e Composição) e aplica o padrão comportamental **Observer**.
 
-* **Subject (Sujeito):** Classe base que gerencia a lista de observadores e notifica a todos quando há uma mudança de estado. Possui um atributo `local` para identificar a origem do dado.
-* **Concrete Subjects (Sensores):** As classes `Temperatura`, `Ph` e `UmidadeAr` herdam de `Subject`. Quando seus valores são alterados via método `set`, disparam a notificação.
-* **Observer (Observador):** Interface com o método `update(Subject s)` que deve ser implementada por quem deseja receber os dados.
-* **Concrete Observer (Universidade):** Implementa a interface `Observer`. Quando notificada, verifica de qual tipo de sensor a informação veio (usando `instanceof`) e imprime a alteração na tela.
-* **EstacaoMonitoramento (Composição):** Representa um local físico na Amazônia. Ao invés de uma estação ser um único sujeito gigante, ela *possui* os três sensores de forma encapsulada. Isso permite que uma universidade assine apenas o dado de seu interesse (ex: apenas pH).
+* **Subject (Sujeito):** Classe base que gerencia a lista de observadores e notifica a todos quando há uma mudança de estado. Possui um atributo 'local' para identificar a origem do dado.
+* **Concrete Subjects (Sensores):** As classes Temperatura, Ph e UmidadeAr herdam de Subject. Quando seus valores são alterados via método 'set', disparam a notificação.
+* **Observer (Observador):** Interface com o método update(Subject s) que deve ser implementada por quem deseja receber os dados.
+* **Concrete Observer (Universidade):** Implementa a interface Observer. Quando notificada, verifica de qual tipo de sensor a informação veio (usando instanceof) e imprime a alteração na tela.
+* **EstacaoMonitoramento (Composição):** Representa um local físico na Amazônia. Ao invés de uma estação ser um único sujeito gigante, ela possui os três sensores de forma encapsulada. Isso permite que uma universidade assine apenas o dado de seu interesse (ex: apenas pH).
